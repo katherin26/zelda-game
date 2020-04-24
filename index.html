@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>Zelda By K.O.</title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="gameStatus" class="hidden">
+            <div class="gameStatusContainer">
+                <div id="linkHealth" class="healthBar">
+                    <div class="healthBarName">
+                        Link
+                    </div>
+                    <div class="health">
+                        <div class="heart heart_100"></div>
+                        <div class="heart heart_100"></div>
+                        <div class="heart heart_100"></div>
+                        <div class="heart heart_100"></div>
+                        <div class="heart heart_100"></div>
+                    </div>
+                </div>
+                <div class="instructions">
+                    <p>Move: Arrow Keys<br>
+                    Attack: Space Bar<br>
+                    Pause: Esc Key</p>
+                </div>
+                <div id="enemyHealth" class="healthBar">
+                    <div class="healthBarName">
+                        Super Boss
+                    </div>
+                    <div class="health">
+                        <div class="heart heart_100"></div>
+                        <div class="heart heart_100"></div>
+                        <div class="heart heart_100"></div>
+                        <div class="heart heart_100"></div>
+                        <div class="heart heart_100"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="gameScreen" class="hidden">
+            <div class="menuContainer">
+                <div id="mainMenu" class="hidden">
+                    <img src="assets/images/main_menu_logo.png" width="400" height="300">
+                    <div class="menuOptions">
+                        <div class="menuOption">
+                            <h3>Created By Katherin Ochoa</h3>
+                        </div>
+                        <div class="menuOption">
+                            <div class="menuInput">
+                                <label><b>LINK:</b>  Health</label> <input id="linkHealth" type='number' value="100"
+                                    max="1000" />
+                            </div>
+                            <div class="menuInput">
+                                <label> Strength</label> <input id="linkStrength" type='number' value="10"
+                                    max="1000" />
+                            </div>
+                        </div>
+                        <div class="menuOption">
+                            <div class="menuInput">
+                                <label><b>SUPER BOSS:</b> Health</label> <input id="enemyHealth" type='number' value="100"
+                                    max="1000" />
+                            </div>
+                            <div class="menuInput">
+                                <label>Strength</label> <input id="enemyStrength" type='number' value="10"
+                                    max="1000" />
+                            </div>
+                        </div>
+                        <div class="menuOption">
+                            <span class="startGame link"> Start Game</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="pauseMenu" class="hidden">
+                    <h2>PAUSED</h2>
+                </div>
+                <div id="gameOverMenu" class="hidden">
+                    <div class="menuOptions">
+                        <div class="menuOption">
+                            <h2> GAME OVER</h2>
+                        </div>
+                        <div class="menuOption">
+                            <span class="startGame link"> Restart Game</span>
+                        </div>
+                        <div class="menuOption">
+                            <span class="goToMainMenu link"> Main Menu</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="koMenu" class="hidden">
+                    <div class="menuOptions">
+                        <div class="menuOption">
+                            <h1>K.O.</h1>
+                        </div>
+                        <div class="menuOption">
+                            <h2> YOU WIN</h2>
+                        </div>
+                        <div class="menuOption">
+                            <span class="startGame link"> Restart Game</span>
+                        </div>
+                        <div class="menuOption">
+                            <span class="goToMainMenu link"> Main Menu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="gameCanvas">
+        </canvas>
+    </div>
+    <script type="module" src="src/index.js"></script>
+</body>
+
+</html>
